@@ -27,28 +27,25 @@ module.exports = {
       // vendor-bundle.js. Note, if we added some library here, but don't use it in the
       // app-bundle.js, then we just wasted a bunch of space.
       'axios',
-      'actioncable',
       'classnames',
       'immutable',
-      'lodash',
-      'marked',
-      'react-bootstrap',
       'react-dom',
       'react-redux',
       'react-on-rails',
       'react-router-redux',
-      'redux-thunk',
-      'react-intl',
+      'redux',
+      'redux-thunk'
     ],
 
     // This will contain the app entry points defined by webpack.hot.config and webpack.rails.config
     app: [
-      './app/bundles/comments/startup/clientRegistration',
+      './app/startup/registration',
     ],
   },
   resolve: {
     extensions: ['', '.js', '.jsx'],
     alias: {
+      assets: path.resolve('./app/assets'),
       libs: path.join(process.cwd(), 'app', 'libs'),
       react: path.resolve('./node_modules/react'),
       'react-dom': path.resolve('./node_modules/react-dom'),
@@ -79,22 +76,11 @@ module.exports = {
   ],
   module: {
     loaders: [
-      { test: /\.(woff2?|svg)$/, loader: 'url?limit=10000' },
-      { test: /\.(ttf|eot)$/, loader: 'file' },
-      { test: /\.(jpe?g|png|gif|svg|ico)$/, loader: 'url?limit=10000' },
-
+      { test: /\.(jpe?g|png|gif|svg|ico)$/, loader: 'url?limit=50000' },
       { test: require.resolve('jquery'), loader: 'expose?jQuery' },
       { test: require.resolve('jquery'), loader: 'expose?$' },
-      { test: require.resolve('turbolinks'), loader: 'imports?this=>window' },
-
-      // Use one of these to serve jQuery for Bootstrap scripts:
-
-      // Bootstrap 3
-      { test: /bootstrap-sass\/assets\/javascripts\//, loader: 'imports?jQuery=jquery' },
-
-      // Bootstrap 4
-      { test: /bootstrap\/dist\/js\/umd\//, loader: 'imports?jQuery=jquery' },
-    ],
+      { test: require.resolve('turbolinks'), loader: 'imports?this=>window' }
+    ]
   },
 
   // Place here all postCSS plugins here, so postcss-loader will apply them
@@ -104,6 +90,6 @@ module.exports = {
   // And sass-resources-loader will load them in every CSS Module (SASS file) for you
   // (so don't need to @import them explicitly)
   // https://github.com/shakacode/sass-resources-loader
-  sassResources: ['./app/assets/styles/app-variables.scss'],
+  sassResources: ['./app/assets/styles/app-variables.scss']
 
 };

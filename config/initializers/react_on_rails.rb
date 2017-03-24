@@ -31,7 +31,7 @@ ReactOnRails.configure do |config|
 
   # Default is false. Can be overriden at the component level.
   # Set to false for debugging issues before turning on to true.
-  config.prerender = true
+  config.prerender = false
 
   # default is true for development, off otherwise
   config.trace = Rails.env.development?
@@ -70,7 +70,7 @@ ReactOnRails.configure do |config|
   # I18N OPTIONS
   ################################################################################
   # Replace the following line to the location where you keep translation.js & default.js.
-  config.i18n_dir = Rails.root.join("client", "app", "libs", "i18n")
+  #config.i18n_dir = Rails.root.join("client", "app", "libs", "i18n")
 
   ################################################################################
   # MISCELLANEOUS OPTIONS

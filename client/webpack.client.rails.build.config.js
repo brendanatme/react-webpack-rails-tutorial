@@ -21,10 +21,7 @@ config.output = {
 config.entry.vendor.unshift(
   'es5-shim/es5-shim',
   'es5-shim/es5-sham',
-  'jquery-ujs',
-
-  // Configures extractStyles to be true if NODE_ENV is production
-  'bootstrap-loader/extractStyles'
+  'jquery-ujs'
 );
 
 // See webpack.common.config for adding modules common to both the webpack dev server and rails

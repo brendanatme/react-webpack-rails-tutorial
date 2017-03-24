@@ -1,0 +1,18 @@
+@import "../assets/styles/app-variables.scss";
+
+// This way we turn CSS Modules off and apply these css rules globaly
+:global {
+  body {
+    background: $body-bg;
+    font-family: 'OpenSans', serif;
+    font-size: $font-size-base;
+    padding-top: 20px;
+  }
+
+  .active:visited,
+  .active {
+    color: purple;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}

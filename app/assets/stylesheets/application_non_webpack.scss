@@ -1,5 +1,29 @@
 // Any non webpack assets can be imported here
 // Others will be served via webpack-dev-server
-.something {
-  color: pink;
+
+//
+// import fonts here
+//
+
+//
+// add all other styles via webpack (in /client/app/assets or anywhere in /client/app)
+//
+
+// import font assets here instead of via webpack
+// because webpack, as far as we can tell, hates us
+// very much
+@font-face {
+  font-family: 'OpenSans';
+  src: asset-url('OpenSans-Light.eot');
+  src: asset-url('OpenSans-Light.woff') format('woff'),
+       asset-url('OpenSans-Light.ttf') format('truetype'),
+       asset-url('OpenSans-Light.svg#openSansLight') format('svg');
+}
+
+@font-face {
+  font-family: 'OpenSansBold';
+  src: asset-url('OpenSans-Bold.eot');
+  src: asset-url('OpenSans-Bold.woff') format('woff'),
+       asset-url('OpenSans-Bold.ttf') format('truetype'),
+       asset-url('OpenSans-Bold.svg#openSansBold') format('svg');
 }

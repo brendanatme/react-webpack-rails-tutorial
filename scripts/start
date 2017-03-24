@@ -1,0 +1,13 @@
+#
+# start
+#
+# start rails server and run webpack build and watch
+# with hot reloading
+# use for development
+#
+
+# define shell command
+cmd = "foreman start -f ./Procfile.hot"
+
+# run shell command
+system(cmd)

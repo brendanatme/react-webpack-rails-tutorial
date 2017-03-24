@@ -27,21 +27,21 @@
 
 # Uncomment below for a setup with just postgres and change your Gemfile to reflect this
 default: &default
-  adapter: postgresql
+  adapter: sqlite3
   username:
   password:
 
 development:
   <<: *default
-  database: react_webpack_dev
+  database: leadnumber_development
 
  # Warning: The database defined as "test" will be erased and
  # re-generated from your development database when you run "rake".
  # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: react_webpack_test
+  database: leadnumber_test
 
 production:
   <<: *default
-  database: react_webpack_dev
+  database: leadnumber_production

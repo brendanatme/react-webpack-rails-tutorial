@@ -3115,6 +3115,11 @@
       "resolved": "https://registry.npmjs.org/ignore/-/ignore-3.2.0.tgz",
       "dev": true
     },
+    "ignore-loader": {
+      "version": "0.1.2",
+      "from": "ignore-loader@latest",
+      "resolved": "https://registry.npmjs.org/ignore-loader/-/ignore-loader-0.1.2.tgz"
+    },
     "immutable": {
       "version": "3.8.1",
       "from": "immutable@>=3.8.1 <4.0.0",

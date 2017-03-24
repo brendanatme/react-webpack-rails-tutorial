@@ -9,7 +9,8 @@ gem "listen"
 # Note: We're using sqllite3 for development and testing
 # gem "sqlite3", group: [:development, :test]
 
-gem "pg"
+gem "sqlite3"
+#gem "pg"
 
 gem "puma"
 
@@ -42,7 +43,7 @@ gem "react_on_rails", "~> 6.7.1"
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # mini_racer is probably faster than therubyracer
-gem "mini_racer"
+# gem "mini_racer" #requires v8 working
 
 gem "autoprefixer-rails"
 
@@ -95,7 +96,7 @@ group :test  do
   gem "coveralls", require: false
   gem "capybara"
   gem "capybara-screenshot"
-  gem "capybara-webkit"
+  #gem "capybara-webkit"
   gem "chromedriver-helper"
   gem "database_cleaner"
   gem "generator_spec"

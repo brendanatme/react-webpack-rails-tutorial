@@ -15,7 +15,7 @@ module.exports = {
   context: __dirname,
   entry: [
     'babel-polyfill',
-    './app/bundles/comments/startup/serverRegistration',
+    './app/startup/serverRegistration',
   ],
   output: {
     filename: 'server-bundle.js',
@@ -40,7 +40,7 @@ module.exports = {
       {
         test: /\.css$/,
         loaders: [
-          'css/locals?modules&importLoaders=0&localIdentName=[name]__[local]__[hash:base64:5]',
+          'css/locals?modules&importLoaders=1&localIdentName=[name]__[local]__[hash:base64:5]',
         ],
       },
       {
@@ -48,12 +48,11 @@ module.exports = {
         loaders: [
           'css/locals?modules&importLoaders=2&localIdentName=[name]__[local]__[hash:base64:5]',
           'sass',
-          'sass-resources',
+          'sass-resources'
         ],
       },
     ],
   },
 
   sassResources: ['./app/assets/styles/app-variables.scss'],
-
 };

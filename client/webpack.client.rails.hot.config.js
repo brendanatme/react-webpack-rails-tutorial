@@ -20,8 +20,7 @@ config.entry.app.push(
 
 // These are Rails specific
 config.entry.vendor.push(
-  'jquery-ujs',
-  'bootstrap-loader'
+  'jquery-ujs'
 );
 
 config.output = {
@@ -57,7 +56,7 @@ config.module.loaders.push(
     test: /\.css$/,
     loaders: [
       'style',
-      'css?modules&importLoaders=1&localIdentName=[name]__[local]__[hash:base64:5]',
+      'css?modules&importLoaders=0&localIdentName=[name]__[local]__[hash:base64:5]',
       'postcss',
     ],
   },
@@ -68,7 +67,7 @@ config.module.loaders.push(
       'css?modules&importLoaders=3&localIdentName=[name]__[local]__[hash:base64:5]',
       'postcss',
       'sass',
-      'sass-resources',
+      'sass-resources'
     ],
   },
   {
